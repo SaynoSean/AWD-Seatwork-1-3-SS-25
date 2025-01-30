@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Reservation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="./assets/vid/Curtain Swing Open Animation.mp4" type="video/mp4"> <!-- Replace with your video URL -->
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Cinema Reservation</h1>
+    </header>
+    
+    <div class="container">
+        <h2>NOW SHOWING!</h2>
+        <div class="movies-container">
+            <div class="movie">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/150" alt="Movie 1" />
+                </div>
+                <h3>Movie 1</h3>
+                <div class="seat-controls">
+                    <input type="number" id="seatsMovie1" class="seat-input" min="1" max="10" value="1" />
+                    <button class="reserveBtn" data-movie="Movie 1">Reserve Seats</button>
+                    <button class="removeBtn" data-movie="Movie 1">Remove Reserved Seats</button>
+                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie1">10</span></span>
+                </div>
+            </div>
+            <div class="movie">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/150" alt="Movie 2" />
+                </div>
+                <h3>Movie 2</h3>
+                <div class="seat-controls">
+                    <input type="number" id="seatsMovie2" class="seat-input" min="1" max="10" value="1" />
+                    <button class="reserveBtn" data-movie="Movie 2">Reserve Seats</button>
+                    <button class="removeBtn" data-movie="Movie 2">Remove Reserved Seats</button>
+                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie2">10</span></span>
+                </div>
+            </div>
+            <div class="movie">
+                <div class="image-container">
+                    <img src="./assets/img/nyebe_white.png" alt="Movie 3" />
+                </div>
+                <h3>Movie 3</h3>
+                <div class="seat-controls">
+                    <input type="number" id="seatsMovie3" class="seat-input" min="1" max="10" value="1" />
+                    <button class="reserveBtn" data-movie="Movie 3">Reserve Seats</button>
+                    <button class="removeBtn" data-movie="Movie 3">Remove Reserved Seats</button>
+                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie3">10</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize reserved seats count
+        const reservedSeatsCount = {
+            "Movie 1": 0,
+            "Movie 2": 0,
+            "Movie 3": 0
+        };
+
+        const reserveBtns = document.querySelectorAll('.reserveBtn');
+        const removeBtns = document.querySelectorAll('.removeBtn');
+
+        reserveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const movie = btn.dataset.movie;
+                const seatsInput = document.getElementById(`seats${movie.replace(" ", "")}`);
+                const availableSeatsElem = document.getElementById(`availableSeats${movie.replace(" ", "")}`);
+                let availableSeats = parseInt(availableSeatsElem.textContent);
+                let seatsToReserve = parseInt(seatsInput.value);
+
+                if (availableSeats >= seatsToReserve) {
+                    availableSeats -= seatsToReserve; // Reserve seats
+                    availableSeatsElem.textContent = availableSeats;
+                    reservedSeatsCount[movie] += seatsToReserve; // Update reserved count
+                    alert(`Reservation successful! ${seatsToReserve} seats reserved for ${movie}.`);
+                } else {
+                    alert('Sorry, not enough seats available.');
+                }
+            });
+        });
+
+        removeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const movie = btn.dataset.movie;
+                const seatsInput = document.getElementById(`seats${movie.replace(" ", "")}`);
+                const availableSeatsElem = document.getElementById(`availableSeats${movie.replace(" ", "")}`);
+                let availableSeats = parseInt(availableSeatsElem.textContent);
+                let seatsToRemove = parseInt(seatsInput.value);
+
+                if (reservedSeatsCount[movie] >= seatsToRemove) {
+                    availableSeats += seatsToRemove; // Add back reserved seats
+                    availableSeatsElem.textContent = availableSeats;
+                    reservedSeatsCount[movie] -= seatsToRemove; // Update reserved count
+                    alert(`${seatsToRemove} seats removed for ${movie}.`);
+                } else {
+                    alert('Cannot remove more seats than reserved.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

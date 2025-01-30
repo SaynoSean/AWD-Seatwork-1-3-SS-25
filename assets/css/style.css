@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Behind other content */
+    transform: translate(-50%, -50%);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #66121d; /* Dark slate blue header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    position: relative; /* Position relative for z-index to work */
+    z-index: 1; /* Content above the video */
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect for better visibility */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fcf9f9; /* Color for "NOW SHOWING!" */
+    font-size: 2em; /* Increase font size for emphasis */
+    text-align: center; /* Center the text */
+}
+
+.movies-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between movie sections */
+}
+
+.movie {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for each movie section */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px; /* Fixed width for square layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    width: 150px; /* Fixed width for image */
+    height: 150px; /* Fixed height for image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.seat-controls {
+    display: flex;
+    flex-direction: column; /* Stack controls vertically */
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.seat-input {
+    width: 50px; /* Input width */
+    margin-bottom: 10px; /* Space between input and buttons */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #2980b9; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px 0; /* Space between buttons */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.seats-available {
+    margin-top: 10px; /* Space above available seats text */
+    font-weight: bold;
+}
