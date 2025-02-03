@@ -4,26 +4,25 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
+  <a href="https://github.com/SaynoSean/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/logo.jpg" alt="Logo" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">Cinema Reservation</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  A showcase of Cinema Reservation
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=SaynoSean/AWD-Seatwork-1-3-SS-25)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
-
+[![wakatime](https://wakatime.com/badge/user/9c7b319f-0a4f-4bf8-b099-f9f3aec27c02/project/b36557b4-0929-4d98-8e55-b2238ca96a51.svg)](https://wakatime.com/badge/user/9c7b319f-0a4f-4bf8-b099-f9f3aec27c02/project/b36557b4-0929-4d98-8e55-b2238ca96a51)
 ---
 
 <br />
@@ -62,17 +61,13 @@
 Description of the project in details.
 
 Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+- Cinema Reservation
+- Showcasing the system of Cinema Reservation
 
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- Single Page Website
 
 ### Technology
 <!-- TODO: List of Technology Used -->
@@ -92,26 +87,27 @@ Guiding Question:
 7. File Structure to follow below.
 
 ```
-WD-ProjectName
-└─ assets
-|   └─ css
-|   |   └─ style.css
-|   └─ img
-|   |   └─ fileWith.jpeg/.jpg/.webp/.png
-|   └─ js
-|       └─ script.js
-└─ pages
-|  └─ pageName
-|     └─ assets
-|     |  └─ css
-|     |  |  └─ style.css
-|     |  └─ img
-|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
-|     |  └─ js
-|     |     └─ script.js
-|     └─ index.html
+AWD-Seatwork-1-3-SS-25
+│── assets
+│   ├── css
+│   │   ├── style.css
+│   ├── js
+│   │   ├── script.js
+│   ├── img
+│   │   ├── wicked.webp
+│   │   ├── cells.jpg
+│   │   ├── paddington.jpg
+│   │   ├── interstellar.jpg
+│   │   ├── logo.jpg
+│   │   ├── sonic.jpg
+│   │   ├── hla.jpg
+│   │   ├── mufasa.jpg
+│   │   ├── moana.jpg
+│   ├── vid
+│   │   ├── Curtain Swing Open Animation.mp4
 └─ index.html
 └─ readme.md
+
 ```
 
 ## Resources
@@ -119,4 +115,6 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Google Fonts | Fonts for the website. | fonts.google.com |
+| Google | Images for the website | google.com |
+

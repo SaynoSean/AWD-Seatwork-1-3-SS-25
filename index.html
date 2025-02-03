@@ -3,84 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema Reservation</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Movie Reservation System</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <video class="background-video" autoplay loop muted>
         <source src="./assets/vid/Curtain Swing Open Animation.mp4" type="video/mp4">
     </video>
-    <div class="overlay"></div>
+
     <header class="header">
         <div class="header-content">
             <h1 class="header-title">🎬 Cinema Reservation 🎟️</h1>
             <p class="header-subtitle">Book your seats for the best movie experience!</p>
         </div>
     </header>
-    <div class="container">
-        <h2>NOW SHOWING!</h2>
-        <div class="movies-container">
-            <div class="movie">
-                <img src="./assets/img/2.jpg" alt="Movie 1" />
-                <h3>Movie 1</h3>
-                <div class="seat-controls">
-                    <input type="number" id="seatsMovie1" class="seat-input" min="1" max="10" value="1" />
-                    <button class="reserveBtn" data-movie="Movie 1">Reserve Seats</button>
-                    <button class="removeBtn" data-movie="Movie 1">Remove Reserved Seats</button>
-                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie1">10</span></span>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="https://via.placeholder.com/250x300" alt="Movie 2" />
-                <h3>Movie 2</h3>
-                <div class="seat-controls">
-                    <input type="number" id="seatsMovie2" class="seat-input" min="1" max="10" value="1" />
-                    <button class="reserveBtn" data-movie="Movie 2">Reserve Seats</button>
-                    <button class="removeBtn" data-movie="Movie 2">Remove Reserved Seats</button>
-                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie2">10</span></span>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="./assets/img/2.jpg" alt="Movie 1" />
-                <h3>Movie 1</h3>
-                <div class="seat-controls">
-                    <input type="number" id="seatsMovie1" class="seat-input" min="1" max="10" value="1" />
-                    <button class="reserveBtn" data-movie="Movie 1">Reserve Seats</button>
-                    <button class="removeBtn" data-movie="Movie 1">Remove Reserved Seats</button>
-                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie1">10</span></span>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="./assets/img/2.jpg" alt="Movie 1" />
-                <h3>Movie 1</h3>
-                <div class="seat-controls">
-                    <input type="number" id="seatsMovie1" class="seat-input" min="1" max="10" value="1" />
-                    <button class="reserveBtn" data-movie="Movie 1">Reserve Seats</button>
-                    <button class="removeBtn" data-movie="Movie 1">Remove Reserved Seats</button>
-                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie1">10</span></span>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="./assets/img/2.jpg" alt="Movie 1" />
-                <h3>Movie 1</h3>
-                <div class="seat-controls">
-                    <input type="number" id="seatsMovie1" class="seat-input" min="1" max="10" value="1" />
-                    <button class="reserveBtn" data-movie="Movie 1">Reserve Seats</button>
-                    <button class="removeBtn" data-movie="Movie 1">Remove Reserved Seats</button>
-                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie1">10</span></span>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="./assets/img/nyebe_white.png" alt="Movie 3" />
-                <h3>Movie 3</h3>
-                <div class="seat-controls">
-                    <input type="number" id="seatsMovie3" class="seat-input" min="1" max="10" value="1" />
-                    <button class="reserveBtn" data-movie="Movie 3">Reserve Seats</button>
-                    <button class="removeBtn" data-movie="Movie 3">Remove Reserved Seats</button>
-                    <span class="seats-available">Available Seats: <span id="availableSeatsMovie3">10</span></span>
-                </div>
+
+    <main class="movies-container">
+        <div class="movie">
+            <img src="./assets/img/wicked.webp" alt="Wicked">
+            <h3>Wicked</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsWicked" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="Wicked">Reserve Seats</button>
+                <button class="removeBtn" data-movie="Wicked">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsWicked">10</span></span>
             </div>
         </div>
-    </div>
+
+        <div class="movie">
+            <img src="./assets/img/cells.jpg" alt="Cells at Work">
+            <h3>Cells at Work</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsCellsAtWork" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="CellsAtWork">Reserve Seats</button>
+                <button class="removeBtn" data-movie="CellsAtWork">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsCellsAtWork">10</span></span>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="./assets/img/paddington.jpg" alt="Paddington in Peru">
+            <h3>Paddington in Peru</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsPaddingtonInPeru" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="PaddingtonInPeru">Reserve Seats</button>
+                <button class="removeBtn" data-movie="PaddingtonInPeru">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsPaddingtonInPeru">10</span></span>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="./assets/img/interstellar.jpg" alt="Interstellar">
+            <h3>Interstellar 10th Year Anniversary</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsInterstellar10thYearAnniversary" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="Interstellar10thYearAnniversary">Reserve Seats</button>
+                <button class="removeBtn" data-movie="Interstellar10thYearAnniversary">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsInterstellar10thYearAnniversary">10</span></span>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="./assets/img/sonic.jpg" alt="Sonic the Hedgehog 3">
+            <h3>Sonic the Hedgehog</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsSonicTheHedgehog" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="SonicTheHedgehog">Reserve Seats</button>
+                <button class="removeBtn" data-movie="SonicTheHedgehog">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsSonicTheHedgehog">10</span></span>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="./assets/img/hla.jpg" alt="Hello, Love, Again">
+            <h3>Hello, Love, Again</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsHelloLoveAgain" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="HelloLoveAgain">Reserve Seats</button>
+                <button class="removeBtn" data-movie="HelloLoveAgain">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsHelloLoveAgain">10</span></span>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="./assets/img/mufasa.jpg" alt="Mufasa: The Lion King">
+            <h3>Mufasa: The Lion King</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsMufasaTheLionKing" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="MufasaTheLionKing">Reserve Seats</button>
+                <button class="removeBtn" data-movie="MufasaTheLionKing">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsMufasaTheLionKing">10</span></span>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="./assets/img/moana.jpg" alt="Moana 2">
+            <h3>Moana 2</h3>
+            <div class="seat-controls">
+                <input type="number" id="seatsMoana2" class="seat-input" min="1" max="10" value="1">
+                <button class="reserveBtn" data-movie="Moana2">Reserve Seats</button>
+                <button class="removeBtn" data-movie="Moana2">Remove Reserved Seats</button>
+                <span class="seats-available">Available Seats: <span id="availableSeatsMoana2">10</span></span>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>
