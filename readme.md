@@ -5,7 +5,6 @@
 <br />
 <div align="center">
   <a href="https://github.com/SaynoSean/">
-  <!-- TODO: If you want to add logo or banner you can add it here -->
     <img src="./assets/img/logo.jpg" alt="Logo" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
